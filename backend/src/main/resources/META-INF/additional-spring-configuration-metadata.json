@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "lotoanalyzer.lotofacil.csv-url",
+      "type": "java.lang.String",
+      "description": "URL CSV de origem do historico da Lotofacil para importacao automatica."
+    }
+  ]
+}

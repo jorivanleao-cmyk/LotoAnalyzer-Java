@@ -1,0 +1,80 @@
+.root-pane {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: linear-gradient(to bottom right, #f6f7ec, #efe7d0);
+}
+
+.header-box {
+    -fx-background-color: linear-gradient(to right, #1f5c46, #2f7f5f);
+}
+
+.title {
+    -fx-font-size: 30px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #ffffff;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #dcefe6;
+}
+
+.field-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 700;
+}
+
+.status-chip {
+    -fx-background-color: #f0bd4f;
+    -fx-padding: 6 12 6 12;
+    -fx-background-radius: 20;
+    -fx-text-fill: #2f2513;
+    -fx-font-weight: 700;
+}
+
+.menu-box {
+    -fx-background-color: #f4ecd8;
+    -fx-pref-width: 230;
+    -fx-border-color: #d7cfae;
+    -fx-border-width: 0 1 0 0;
+}
+
+.menu-button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2b2f2d;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 12;
+    -fx-padding: 12;
+}
+
+.menu-button:hover {
+    -fx-background-color: #e6f3eb;
+}
+
+.menu-primary {
+    -fx-background-color: #e36d39;
+    -fx-text-fill: #ffffff;
+}
+
+.menu-primary:hover {
+    -fx-background-color: #cf5f2f;
+}
+
+.content-box {
+    -fx-background-color: rgba(255, 255, 255, 0.55);
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #203228;
+}
+
+.output-area {
+    -fx-font-family: "Consolas";
+    -fx-font-size: 13px;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #cdd8cc;
+    -fx-border-width: 1;
+}

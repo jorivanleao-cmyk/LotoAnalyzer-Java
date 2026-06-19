@@ -48,6 +48,19 @@ $$
 - Top 10 jogos alternativos.
 - Jogos de 15 dezenas com score agregado.
 
+### Módulo 6 - Machine Learning (Serviço Separado)
+
+- Endpoint dedicado para Random Forest (surrogate).
+- Endpoint dedicado para XGBoost (surrogate).
+- Endpoint dedicado para Rede Neural (surrogate).
+- Retorno com top 15 dezenas e score por número.
+
+### Módulo 7 - Endpoints de Gráficos (JFreeChart-ready)
+
+- Série anual por número.
+- Série mensal por número.
+- Pacote de séries anuais para top 15 dezenas sugeridas.
+
 ## Estrutura do Repositório
 
 ```text
@@ -91,6 +104,37 @@ Base: /api/loto
 - GET /tendencias
 - GET /score
 - GET /jogos
+- GET /ml/random-forest
+- GET /ml/xgboost
+- GET /ml/rede-neural
+- GET /graficos/anual/{numero}
+- GET /graficos/mensal/{numero}
+- GET /graficos/pacote-anual-top15
+
+### Exemplo de retorno para gráficos
+
+```json
+{
+	"titulo": "Frequencia anual - numero 10",
+	"pontos": [
+		{ "label": "2023", "valor": 118 },
+		{ "label": "2024", "valor": 121 }
+	]
+}
+```
+
+### Exemplo de retorno ML
+
+```json
+{
+	"algoritmo": "xgboost-surrogate",
+	"top15": [10, 20, 25, 3, 6, 11, 14, 19, 21, 7, 8, 12, 1, 4, 16],
+	"scorePorNumero": {
+		"10": 0.9231,
+		"20": 0.9122
+	}
+}
+```
 
 ## Banco de Dados
 
@@ -139,6 +183,23 @@ Profiles:
 ```bash
 cd frontend
 mvn javafx:run
+```
+
+### 3. Subir tudo com Docker Compose
+
+```bash
+docker compose up -d --build
+```
+
+Serviços:
+
+- PostgreSQL: localhost:5432
+- Backend: localhost:8080
+
+Para derrubar:
+
+```bash
+docker compose down
 ```
 
 ## Diferencial para TCC
